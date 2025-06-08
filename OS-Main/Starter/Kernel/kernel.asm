@@ -1,1 +1,0 @@
-; responsibel for memory management, I/O, interrupt handling

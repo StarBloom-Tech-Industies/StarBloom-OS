@@ -134,3 +134,11 @@ gdt64:
 .pointer:
 	dw $ - gdt64 - 1 ; length
 	dq gdt64 ; address
+keyboard_input:
+	push eax
+	in al, 60h
+
+	mov al, 20h
+	out 20h, al
+	pop eax
+	iret
